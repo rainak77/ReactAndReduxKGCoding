@@ -1,0 +1,27 @@
+h1{
+color: brown !important;
+ font-size: 700 !important;
+ margin: 10px !important;
+ margin-bottom: 20px !important;
+ text-align: center;
+}
+
+body{
+  background-color: antiquewhite !important;
+}
+
+input {
+  width: 100%;
+}
+
+.itemsContainer {
+  text-align: left;
+}
+
+.kg-row{
+  margin: 10px;
+}
+
+.kg-button{
+  min-width: 80px;
+}
