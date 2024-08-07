@@ -1,9 +1,20 @@
 import styles from "./item.module.css";
 
-export default function Item({ foodItem }) {
+const Item = ({ foodItem, bought, handleBuybutton }) => {
   return (
-    <li className={`${styles["kg-item"]} list-group-item`}>
+    <li
+      id={`${foodItem}listItem`}
+      className={`${styles["kg-item"]} list-group-item ${bought && "active"}`}
+    >
       <span className={styles["kg-span"]}>{foodItem}</span>
+      <button
+        className={`${styles.button} btn btn-info`}
+        onClick={handleBuybutton}
+      >
+        Buy
+      </button>
     </li>
   );
-}
+};
+
+export default Item;
