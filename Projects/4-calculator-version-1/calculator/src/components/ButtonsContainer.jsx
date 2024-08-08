@@ -22,7 +22,9 @@ export default function ButtonsContainer() {
   return (
     <div className={styles.buttonsContainer}>
       {buttonNames.map((item) => (
-        <button className={styles.button}>{item}</button>
+        <button key={item} className={styles.button}>
+          {item}
+        </button>
       ))}
     </div>
   );
