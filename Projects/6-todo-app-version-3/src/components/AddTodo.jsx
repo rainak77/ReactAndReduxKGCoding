@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BiMessageAdd } from "react-icons/bi";
 
 function AddTodo({ handleNewItem }) {
   const [todoName, setTodoName] = useState("");
@@ -38,7 +39,7 @@ function AddTodo({ handleNewItem }) {
             onClick={handleAddButton}
             className="btn btn-success kg-button"
           >
-            Add
+            <BiMessageAdd />
           </button>
         </div>
       </div>
