@@ -17,13 +17,17 @@ function App() {
       todoDate: "4/10/2023",
     },
   ];
-  const [todoItems, setItems] = useState(initialTodoItems);
+  const [todoItems, setItems] = useState([]);
   const handleNewItem = (itemName, ItemDate) => {
-    const newtodoItems = [
-      ...todoItems,
+    // const newtodoItems = [
+    //   ...todoItems,
+    //   { todoname: itemName, todoDate: ItemDate },
+    // ];
+
+    setItems((currentItems) => [
+      ...currentItems,
       { todoname: itemName, todoDate: ItemDate },
-    ];
-    setItems(newtodoItems);
+    ]);
   };
 
   const handleDeleteItem = (itemname) => {
@@ -32,7 +36,7 @@ function App() {
   };
 
   return (
-    <center className="container">
+    <center className="container border">
       <AppName />
       <AddTodo handleNewItem={handleNewItem} />
       {todoItems.length === 0 && <WelcomeMessage />}
